@@ -41,8 +41,3 @@ This is a **Spring Boot** application for managing student information. It allow
 - Maven 3.8 or later
 - Any IDE (e.g., IntelliJ IDEA, Eclipse, VS Code)
 
-### Steps to Run Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/student-management.git
