@@ -82,10 +82,10 @@ unzip student-management-system.zip
 cd student-management-system
 
 -**Deploy EC2**
-# Upload JAR file to EC2
+**Upload JAR file to EC2**
 scp -i /Downloads/key1.pem target/student-management.jar eec2-user@ec2-3-105-85-107.ap-west-1.compute.amazonaws.com:/home/ec2-user/
 
-# SSH into EC2 and run the JAR file
+**SSH into EC2 and run the JAR file**
 ssh -i /Downloads/key1.pem ec2-user@ec2-3-105-85-107.ap-west-1.compute.amazonaws.com "java -jar /home/ec2-user/student-management.jar"
 
 ### Prerequisites
