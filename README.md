@@ -46,12 +46,19 @@ The application is deployed using Jenkins CI/CD pipeline to AWS EC2.
 
 ## Jenkinsfile
 pipeline {
+
     agent any
+    
     stages {
+    
        stage('Checkout') {
+       
             steps {
+            
                 git branch: 'main', url: 'https://github.com/SanviBhelkar/Springboot_Application.git'
+                
             }
+            
         }
         stage('Build') {
             steps {
