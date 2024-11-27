@@ -45,6 +45,7 @@ This is a **Spring Boot** application for managing student information. It allow
 The application is deployed using Jenkins CI/CD pipeline to AWS EC2.
 
 ## Jenkinsfile
+
 pipeline {
 
     agent any
@@ -84,15 +85,20 @@ pipeline {
 3. Deploy using the Jenkinsfile provided.
 
 -**Set up Project Structure**
+
 curl https://start.spring.io/starter.zip -d dependencies=web,data-jpa,h2,security -d name=student-management-system -o student-management-system.zip
+
 unzip student-management-system.zip
+
 cd student-management-system
 
 -**Deploy EC2**
 **Upload JAR file to EC2**
+
 scp -i /Downloads/key1.pem target/student-management.jar eec2-user@ec2-3-105-85-107.ap-west-1.compute.amazonaws.com:/home/ec2-user/
 
 **SSH into EC2 and run the JAR file**
+
 ssh -i /Downloads/key1.pem ec2-user@ec2-3-105-85-107.ap-west-1.compute.amazonaws.com "java -jar /home/ec2-user/student-management.jar"
 
 ### Prerequisites
